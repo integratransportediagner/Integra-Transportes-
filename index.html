@@ -1,0 +1,326 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integra Transporte Diagner Internacional</title>
+    
+    <!-- Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração de Cores do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos adicionais personalizados */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(23, 37, 84, 0.85), rgba(23, 37, 84, 0.75)), url('https://images.unsplash.com/photo-1586528116311-ad8ed7450f2c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="bg-brand-600 p-2 rounded-lg text-white">
+                        <i data-lucide="globe-2" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-xl text-brand-950 leading-tight">Integra Transporte</span>
+                        <span class="text-xs text-brand-600 font-semibold tracking-wider">DIAGNER INTERNACIONAL</span>
+                    </div>
+                </div>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre Nós</a>
+                    <a href="#servicos" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Serviços</a>
+                    <a href="#contato" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contato</a>
+                    <a href="https://wa.me/5511930157085" target="_blank" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Fale Conosco
+                    </a>
+                </div>
+
+                <!-- Menu Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50">Início</a>
+                <a href="#sobre" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50">Sobre Nós</a>
+                <a href="#servicos" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50">Serviços</a>
+                <a href="#contato" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50">Contato</a>
+                <a href="https://wa.me/5511930157085" target="_blank" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-bold bg-accent-500 text-white hover:bg-accent-600">
+                    Chamar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-[90vh]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-accent-500"></i>
+                    Transporte Internacional Seguro
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Conectando o seu negócio ao <span class="text-brand-100">mercado global.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light max-w-2xl">
+                    Especialistas em transporte e logística internacional com segurança, agilidade e compromisso em cada entrega.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5511930157085" target="_blank" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-brand-500/30 flex items-center justify-center gap-2 text-center">
+                        Solicitar Cotação
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#servicos" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all flex items-center justify-center text-center">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Informativos Rápidos -->
+    <section class="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden md:block">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-xl p-6 border border-gray-100 flex items-start gap-4 transform transition hover:-translate-y-1">
+                <div class="bg-brand-50 p-3 rounded-lg text-brand-600">
+                    <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-1">Segurança</h3>
+                    <p class="text-sm text-gray-500">Sua carga protegida e monitorada em todas as etapas.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-xl p-6 border border-gray-100 flex items-start gap-4 transform transition hover:-translate-y-1">
+                <div class="bg-brand-50 p-3 rounded-lg text-brand-600">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-1">Agilidade</h3>
+                    <p class="text-sm text-gray-500">Rotas otimizadas para garantir o menor tempo de trânsito.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-xl p-6 border border-gray-100 flex items-start gap-4 transform transition hover:-translate-y-1">
+                <div class="bg-brand-50 p-3 rounded-lg text-brand-600">
+                    <i data-lucide="handshake" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-900 text-lg mb-1">Compromisso</h3>
+                    <p class="text-sm text-gray-500">Cumprimento rigoroso de prazos e excelência no atendimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="Logística Internacional" class="rounded-2xl shadow-2xl z-10 relative">
+                    <div class="absolute inset-0 border-2 border-brand-600 rounded-2xl transform translate-x-4 translate-y-4 -z-0"></div>
+                    
+                    <!-- Badge Flutuante -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 z-20">
+                        <div class="bg-brand-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl">
+                            +
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-xs font-semibold uppercase tracking-wider">Especialistas em</p>
+                            <p class="text-brand-950 font-bold">Logística Global</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2">Quem Somos</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">Sua parceira estratégica em comércio exterior.</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A <strong class="text-brand-800">Integra Transporte Diagner Internacional</strong> nasceu com o propósito de simplificar a logística internacional para empresas de todos os portes. Entendemos que cada carga é única e exige um planejamento minucioso.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nossa equipe de especialistas trabalha incansavelmente para oferecer soluções integradas que unem segurança, agilidade e compromisso absoluto. Cuidamos de toda a burocracia para que você possa focar no que realmente importa: o crescimento do seu negócio.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                            <span class="text-gray-700 font-medium">Atendimento personalizado e dedicado.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                            <span class="text-gray-700 font-medium">Soluções door-to-door completas.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
+                            <span class="text-gray-700 font-medium">Transparência em todas as operações.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2">Nossas Soluções</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Serviços de Logística Integrada</h3>
+                <p class="text-gray-600 text-lg">Oferecemos um portfólio completo para atender todas as demandas do seu fluxo de comércio internacional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="ship" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Transporte Marítimo</h4>
+                    <p class="text-gray-600 mb-4">Soluções FCL e LCL para os principais portos do mundo, garantindo o melhor custo-benefício para sua carga.</p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="plane" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Transporte Aéreo</h4>
+                    <p class="text-gray-600 mb-4">Agilidade máxima para cargas urgentes. Parcerias com as melhores companhias aéreas globais.</p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="truck" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Transporte Rodoviário</h4>
+                    <p class="text-gray-600 mb-4">Coletas e entregas nacionais e no Mercosul com frota monitorada e rastreamento em tempo real.</p>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="file-check-2" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Despacho Aduaneiro</h4>
+                    <p class="text-gray-600 mb-4">Assessoria completa na liberação alfandegária, evitando atrasos e custos extras com documentação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-brand-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Pronto para otimizar sua logística?</h2>
+            <p class="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">Fale agora com um de nossos especialistas e descubra como podemos ajudar a sua empresa a alcançar novos mercados.</p>
+            <a href="https://wa.me/5511930157085" target="_blank" class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Chamar no WhatsApp Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Informações de Contato -->
+                <div>
+                    <h2 class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2">Fale Conosco</h2>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Estamos prontos para atender sua demanda.</h3>
+                    <p class="text-gray-600 mb-10 text-lg">
+                        Entre em contato através dos nossos canais oficiais. Nossa equipe responderá o mais rápido possível para apresentar a melhor solução em transporte para você.
+                    </p>
+
+                    <div class="space-y-8">
+                        <!-- Telefone/WhatsApp -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 text-lg mb-1">Telefone / WhatsApp</p>
+                                <a href="https://wa.me/5511930157085" target="_blank" class="text-gray-600 hover:text-brand-600 transition-colors text-lg">
+                                    (11) 93015-7085
+                                </a>
+                                <p class="text-sm text-gray-500 mt-1">Atendimento ágil pelo WhatsApp.</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 text-lg mb-1">E-mail</p>
+                                <a href="mailto:Biancasoaresdossantos14@gmail.com" class="text-gray-600 hover:text-brand-600 transition-colors break-all text-lg">
+                                    Biancasoaresdossantos14@gmail.com
+                                </a>
+                                <p class="text-sm text-gray-500 mt-1">Envie sua cotação ou dúvidas.</p>
+                            </div>
+                        </div>
+
+               
